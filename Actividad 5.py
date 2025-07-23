@@ -30,3 +30,7 @@ while True:
                 print("La venta máxima es: ", min(ventas))
             else:
                 print("No hay ventas")
+        case "4":
+            if ventas:
+                promedio = sum(ventas) / len(ventas)
+                print(f"El promedio de ventas es: {promedio}")
