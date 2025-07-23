@@ -13,8 +13,14 @@ while True:
         case "1":
             cantidad = int(input("¿Cuántos días desea ingresar?(Ingrese valores enteros positivos): "))
             for i in range(cantidad):
-                venta = int(input(f"Ingrese venta del día {i + 1}: Q"))
+                venta = int(input(f"Ingrese la venta del día {i + 1}: Q"))
                 if venta > 0:
                     ventas.append(venta)
                 else:
-                    print("La venta debe ser mayor que 0. No se guardó.")
+                    print("La venta tiene que ser de algún valor, no se guardó")
+        case "2":
+            if ventas:
+                for i, v in enumerate(ventas, 1):
+                    print(f"Día {i}: Q{v}")
+            else:
+                print("No hay ventas registradas.")
