@@ -34,3 +34,12 @@ while True:
             if ventas:
                 promedio = sum(ventas) / len(ventas)
                 print(f"El promedio de ventas es: {promedio}")
+        case "5":
+            if ventas:
+                cont = 0
+                for i in ventas:
+                    if i > 1000:
+                        cont += 1
+                print(f"Cantidad de días con ventas mayores a Q1000: {cont}")
+            else:
+                print("No hay ventas")
