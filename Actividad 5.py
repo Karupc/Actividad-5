@@ -24,3 +24,9 @@ while True:
                     print(f"Día {i}: Q{v}")
             else:
                 print("No hay ventas registradas.")
+        case "3":
+            if ventas:
+                print("La venta mínima es: ", max(ventas))
+                print("La venta máxima es: ", min(ventas))
+            else:
+                print("No hay ventas")
