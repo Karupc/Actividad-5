@@ -26,14 +26,15 @@ while True:
                 print("No hay ventas registradas.")
         case "3":
             if ventas:
-                print("La venta mínima es: ", max(ventas))
-                print("La venta máxima es: ", min(ventas))
+                print("La venta mínima es de: Q", max(ventas))
+                print("La venta máxima es de: Q", min(ventas))
             else:
                 print("No hay ventas")
         case "4":
             if ventas:
                 promedio = sum(ventas) / len(ventas)
-                print(f"El promedio de ventas es: {promedio}")
+                prome = int(promedio)
+                print(f"El promedio de ventas es de: Q{prome}")
         case "5":
             if ventas:
                 cont = 0
@@ -43,3 +44,20 @@ while True:
                 print(f"Cantidad de días con ventas mayores a Q1000: {cont}")
             else:
                 print("No hay ventas")
+        case "6":
+            if ventas:
+                for i, v in enumerate(ventas, 1):
+                    if v > 1000:
+                        t = "Alta"
+                    elif v >= 500:
+                        t = "Media"
+                    else:
+                        t = "Baja"
+                    print(f"Día {i}: Q{v} Venta {t}")
+            else:
+                print("No hay ventas")
+        case "7":
+            print("Gracias por utilizar el programa")
+            break
+        case _:
+            print("Opción inválida, ingrese una nuevamente")
